@@ -1,5 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+$gr: #999999;
+$red: #F82716;
+$pink: #FFB3BE;
+$white: #ffffff;
+
 *{
     margin: 0;
     outline-style: none;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gr;
+}
+
+
+#timerBox {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes helloText {
+    0% {
+        transform: translateX(-50x);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+h4 {
+    margin-bottom: 0px;
+    //text-align: right;
+    font-size: 55px;
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: helloText 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+
+    color: $pink;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: $red;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+h4[id="titleVS"] {
+    transform: translateY(-20px);
+    color: $red;
+
+    &:hover{
+        color: $white;
+    }
+}
+
+h4[id="yaersVS"] {
+    animation-delay: 1.1s;
+}
+h4[id="monthsVS"] {
+    animation-delay: 1.6s;
+}
+h4[id="daysVS"] {
+    animation-delay: 2.1s;
+}
+h4[id="hoursVS"] {
+    animation-delay: 2.6s;
+}
+h4[id="minutesVS"] {
+    animation-delay: 3.2s;
+}
+h4[id="secondsVS"] {
+    animation-delay: 3.7s;
+}
+h4[id="heartVS"] {
+    transform: translateY(-20px);
+    animation-delay: 5.3s;
+
+    font-size: 100px;
+}
+
+
+@media only screen and (max-device-width: 720px) {
+    h4 {
+        font-size: 46px;
+    }
+
+    h4[id="heartVS"] {    
+        font-size: 80px;
+    }
+}
+
+
+@media only screen and (max-device-width: 320px) {
+    h4 {
+        font-size: 30px;
+    }
+
+    h4[id="heartVS"] {    
+        font-size: 50px;
+    }
 }
