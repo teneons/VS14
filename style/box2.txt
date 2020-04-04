@@ -1,0 +1,54 @@
+$darkGray: #333333;
+$dark1: #424242;
+$dark2: #212121;
+$dark3: #101010;
+
+
+@mixin styleBox ($backClr) {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    background-color: $backClr;
+}
+
+
+*{
+    margin: 0;
+    outline-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkGray;
+}
+
+#mainBox {
+    width: 620px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    
+    background-color: wheat;
+}
+
+
+#topBox {
+    @include styleBox ($dark1);
+    transform: rotateX(45deg) rotateZ(45deg) skew(0deg, 5deg);
+}
+#leftBox {
+    @include styleBox ($dark3);
+    transform: rotateY(-40deg) translateZ(155px) skew(0deg, 25deg);
+}
+#rightBox {
+    @include styleBox ($dark2);
+    transform: rotateY(40deg) translateZ(154px) skew(0deg, -25deg);
+}
