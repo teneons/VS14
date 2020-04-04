@@ -9,10 +9,9 @@ let hoursVS = nowDate.diff(startVS, 'hours')
 let minutesVS = nowDate.diff(startVS, 'minutes')
 let secondsVS = nowDate.diff(startVS, 'seconds')
 
-
-
-console.log(`Бусь, вже написаний код який рахує ск ми разом, і ми разом: \n\n${yaersVS} роки \n \n${monthsVS} місяці
-    \n${daysVS} дні 
-    \n${hoursVS} години 
-    \n${minutesVS} хвилини 
-    \n${secondsVS} секунди`)
+document.getElementById('yaersVS').innerHTML = `${yaersVS} years`;
+document.getElementById('monthsVS').innerHTML = `${monthsVS} months`;
+document.getElementById('daysVS').innerHTML = `${daysVS} days`;
+document.getElementById('hoursVS').innerHTML = `${hoursVS} hours`;
+document.getElementById('minutesVS').innerHTML = `${minutesVS} minutes`;
+document.getElementById('secondsVS').innerHTML = `${secondsVS} seconds`;
