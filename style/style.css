@@ -2,6 +2,10 @@
 * {
   margin: 0;
   outline-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -16,7 +20,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #999999;
+  background-color: #777777;
 }
 
 #timerBox {
@@ -63,8 +67,8 @@ body {
 h4 {
   margin-bottom: 0px;
   font-size: 55px;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   opacity: 0;
   -webkit-animation: helloText 1s;
           animation: helloText 1s;
@@ -84,13 +88,18 @@ h4:hover {
 }
 
 h4[id="titleVS"] {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   color: #F82716;
 }
 
 h4[id="titleVS"]:hover {
   color: #ffffff;
+}
+
+h4[id="titleVS"]:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 h4[id="yaersVS"] {
@@ -124,11 +133,15 @@ h4[id="secondsVS"] {
 }
 
 h4[id="heartVS"] {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   -webkit-animation-delay: 5.3s;
           animation-delay: 5.3s;
   font-size: 100px;
+}
+
+h4[id="heartVS"]:hover {
+  background-color: #777777;
 }
 
 @media only screen and (max-device-width: 720px) {
